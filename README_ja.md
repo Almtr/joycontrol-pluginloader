@@ -2,13 +2,13 @@
 
 [English](./README.md) / [日本語](./README_ja.md)
 
-This is a plugin loader for joycontrol that can emulate Nintendo Switch controller over Bluetooth.  
+Bluetooth 経由で Nintendo Switch コントローラのエミュレートが行える joycontrol 用のプラグインローダです。  
 [GitHub - mart1nro/joycontrol](https://github.com/mart1nro/joycontrol)
 
-## Installation
+## インストール
 
-- Install joycontrol  
-  Details: [GitHub - mart1nro/joycontrol - README.md](https://github.com/mart1nro/joycontrol/blob/master/README.md)
+- joycontrol のインストール  
+  詳細: [GitHub - mart1nro/joycontrol - README.md](https://github.com/mart1nro/joycontrol/blob/master/README.md)
 
     ```sh
     $ sudo apt install python3-dbus libhidapi-hidraw0
@@ -16,14 +16,14 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
     $ sudo pip3 install joycontrol/
     ```
 
-- Install joycontrol-pluginloader
+- joycontrol-pluginloader のインストール
 
     ```sh
     $ git clone https://github.com/Almtr/joycontrol-pluginloader
     $ sudo pip3 install joycontrol-pluginloader/
     ```
 
-## Pairing the Pro Controller of joycontrol
+## joycontrol の Proコントローラをペアリングする
 
 1. Open the "Change Grip/Order" menu of the Nintendo Switch
 
@@ -35,15 +35,15 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
     $ sudo python3 joycontrol/run_controller_cli.py PRO_CONTROLLER
     ```
 
-## Usage
+## 使い方
 
-- Basic Usage
+- 基本的な使い方
 
     ```
     $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> <Joycontrol Plugin path>
     ```
 
-- Options
+- オプション
 
     ```
     usage: joycontrol-pluginloader.py [-h] [-d DEVICE_ID] [-r RECONNECT_BT_ADDR]
@@ -63,9 +63,9 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
       -v, --verbose
     ```
 
-## How to create a plugin
+## プラグインの作り方
 
-- Create a file (e.g. ``SamplePlugin.py``)
+- ファイルを作成する (e.g. ``SamplePlugin.py``)
 
     ```python
     import logging
@@ -88,7 +88,7 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
             await self.wait(0.3)
     ```
 
-- Load and run ``SamplePlugin.py``
+- ``SamplePlugin.py`` をロードし、実行する 
 
     ```sh
     $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SamplePlugin.py arg1 arg2
@@ -103,17 +103,17 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
     [13:30:01] __main__ _main::45 INFO - Stopping communication...
     ```
 
-## Sample Plugins
+## サンプルプラグイン
 
 ### TestControllerButotns
 
-Check if the controller buttons are working properly.
+コントローラのボタンが正常に動作ししているかを確認する。
 
-1. Open the "Test Controller Buttons" menu
+1. 「ボタンの動作チェック」メニューを開く
 
-    Home > System Settings > Controllers and Sensors > Test Input Devices > Test Controller Buttons
+    HOME > 設定 > コントローラーとセンサー > 入力デバイスの動作チェック > ボタンの動作チェック
 
-1. Run TestControllerButtons.py with joycontrol-pluginloader
+1. joycontrol-pluginloader で TestControllerButtons.py を実行する
 
     ```
     $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerButtons.py 
@@ -121,13 +121,13 @@ Check if the controller buttons are working properly.
 
 ### TestControllerSticks
 
-Check if the controller sticks are working properly.
+コントローラのスティックが正常に動作ししているかを確認する。
 
-1. Open the "Calibrate Control Sticks" menu
+1. 「スティックの補正」メニューを開く
 
-    Home > System Settings > Controllers and Sensors > Calibrate Control Sticks
+    HOME > 設定 > コントローラーとセンサー > スティックの補正
 
-1. Run TestControllerSticks.py with joycontrol-pluginloader
+1. joycontrol-pluginloader で TestControllerSticks.py を実行する
 
     ```
     $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerSticks.py 
@@ -135,9 +135,9 @@ Check if the controller sticks are working properly.
 
 ### RepeatA
 
-Pushing the "A Button" repeatedly.
+Aボタンを繰り返し押す。
 
-- Run RepeatA.py with joycontrol-pluginloader
+- joycontrol-pluginloader で RepeatA.py を実行する
 
     ```
     $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/RepeatA.py 
@@ -145,15 +145,15 @@ Pushing the "A Button" repeatedly.
 
 ### SimpleMacro
 
-Press the specified buttons in sequence.
+指定されたボタンを順番に押す。
 
-- Run SimpleMacro.py with joycontrol-pluginloader
+- joycontrol-pluginloader で SimpleMacro.py を実行する
 
     ```
     $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SimpleMacro.py a b x y up down left right
     ```
 
-## References
+## 参考
 
 - [GitHub - mart1nro/joycontrol](https://github.com/mart1nro/joycontrol)
 - [Discord - Joy-Con Droid](https://discord.com/invite/SQNEx9v)
