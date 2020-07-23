@@ -25,11 +25,11 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 
 ## joycontrol の Proコントローラをペアリングする
 
-1. Open the "Change Grip/Order" menu of the Nintendo Switch
+1. Nintendo Switch の「持ちかた/順番を変える」メニューを開く
 
-    Home > Controllers > Change Grip/Order
+    HOME > コントローラー > 持ちかた/順番を変える
 
-1. Run the script
+1. スクリプトを実行する
 
     ```sh
     $ sudo python3 joycontrol/run_controller_cli.py PRO_CONTROLLER
