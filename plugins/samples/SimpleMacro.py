@@ -3,9 +3,9 @@ from JoycontrolPlugin import JoycontrolPlugin
 
 logger = logging.getLogger(__name__)
 
-class SimpleButtonMacro(JoycontrolPlugin):
+class SimpleMacro(JoycontrolPlugin):
     async def run(self):
-        logger.info('Simple Button Macro Plugin')
+        logger.info('Simple Macro Plugin')
 
         button_list = self.options
         logger.info(f'Button List {button_list}')

@@ -3,7 +3,7 @@ from JoycontrolPlugin import JoycontrolPlugin
 
 logger = logging.getLogger(__name__)
 
-class TestControlSticks(JoycontrolPlugin):
+class TestControllerSticks(JoycontrolPlugin):
     async def test_left_stick(self):
         await self.button_push('l_stick')
         await self.wait(1.0)
