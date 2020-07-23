@@ -105,7 +105,7 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 
 ## Sample Plugins
 
-### TestControllerButotns
+### TestControllerButtons
 
 Check if the controller buttons are working properly.
 
