@@ -40,7 +40,7 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 - Basic Usage
 
     ```
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> <Joycontrol Plugin path>
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> <Joycontrol Plugin path>
     ```
 
 - Options
@@ -91,7 +91,7 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 - Load and run ``SamplePlugin.py``
 
     ```sh
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SamplePlugin.py arg1 arg2
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SamplePlugin.py arg1 arg2
 
     <snip>
 
@@ -116,7 +116,7 @@ Check if the controller buttons are working properly.
 1. Run TestControllerButtons.py with joycontrol-pluginloader
 
     ```
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerButtons.py 
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerButtons.py 
     ```
 
 ### TestControllerSticks
@@ -130,7 +130,7 @@ Check if the controller sticks are working properly.
 1. Run TestControllerSticks.py with joycontrol-pluginloader
 
     ```
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerSticks.py 
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerSticks.py 
     ```
 
 ### RepeatA
@@ -140,7 +140,7 @@ Pushing the "A Button" repeatedly.
 - Run RepeatA.py with joycontrol-pluginloader
 
     ```
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/RepeatA.py 
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/RepeatA.py 
     ```
 
 ### SimpleMacro
@@ -150,7 +150,7 @@ Press the specified buttons in sequence.
 - Run SimpleMacro.py with joycontrol-pluginloader
 
     ```
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SimpleMacro.py a b x y up down left right
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SimpleMacro.py a b x y up down left right
     ```
 
 ## References

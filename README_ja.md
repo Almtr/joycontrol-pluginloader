@@ -40,7 +40,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 - 基本的な使い方
 
     ```
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> <Joycontrol Plugin path>
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> <Joycontrol Plugin path>
     ```
 
 - オプション
@@ -91,7 +91,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 - ``SamplePlugin.py`` をロードし、実行する 
 
     ```sh
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SamplePlugin.py arg1 arg2
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SamplePlugin.py arg1 arg2
 
     <snip>
 
@@ -116,7 +116,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 1. joycontrol-pluginloader で TestControllerButtons.py を実行する
 
     ```
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerButtons.py 
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerButtons.py 
     ```
 
 ### TestControllerSticks
@@ -130,7 +130,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 1. joycontrol-pluginloader で TestControllerSticks.py を実行する
 
     ```
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerSticks.py 
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerSticks.py 
     ```
 
 ### RepeatA
@@ -140,7 +140,7 @@ Aボタンを繰り返し押す。
 - joycontrol-pluginloader で RepeatA.py を実行する
 
     ```
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/RepeatA.py 
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/RepeatA.py 
     ```
 
 ### SimpleMacro
@@ -150,7 +150,7 @@ Aボタンを繰り返し押す。
 - joycontrol-pluginloader で SimpleMacro.py を実行する
 
     ```
-    $ sudo python3 joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SimpleMacro.py a b x y up down left right
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SimpleMacro.py a b x y up down left right
     ```
 
 ## 参考
