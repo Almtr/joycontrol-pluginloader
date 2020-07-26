@@ -15,4 +15,9 @@ setup(
     install_requires=[
         'hid', 'aioconsole', 'dbus-python', 'crc8'
     ],
+    entry_points={
+        'console_scripts': [
+            'joycontrol-pluginloader=JoycontrolPlugin.loader:main',
+        ],
+    },
 )

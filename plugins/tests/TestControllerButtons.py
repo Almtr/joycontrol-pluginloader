@@ -20,7 +20,7 @@ class TestControllerButtons(JoycontrolPlugin):
             await self.wait(0.3)
 
     async def pushing_button_simultaneous(self):
-        logger.info('Push L and R buttons')
+        logger.info('Push A and B buttons')
         await self.button_push('a', 'b')
         await self.wait(0.3)
 
