@@ -123,16 +123,16 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 - Load and run ``SamplePlugin.py``
 
     ```sh
-    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/samples/SamplePlugin.py arg1 arg2
+    $ sudo joycontrol-pluginloader -r EC:C4:0D:F0:D1:2E plugins/samples/SamplePlugin.py --plugin-options option1 option2
 
     <snip>
 
-    [13:30:00] JoycontrolPlugin.loader load_plugin::9 INFO - Loading: plugins/samples/SamplePlugin.py
-    [13:30:00] plugins/samples/SamplePlugin.py run::8 INFO - This is sample joycontrol plugin!
-    [13:30:00] plugins/samples/SamplePlugin.py run::10 INFO - Plugin Options: ['arg1', 'arg2']
-    [13:30:00] plugins/samples/SamplePlugin.py run::12 INFO - Push the A Button
-    [13:30:01] plugins/samples/SamplePlugin.py run::16 INFO - Tilt the left stick down
-    [13:30:01] __main__ _main::45 INFO - Stopping communication...
+    [20:12:44] JoycontrolPlugin.loader __load_plugin::22 INFO - Loading: plugins/samples/SamplePlugin.py
+    [20:12:44] plugins/samples/SamplePlugin.py run::8 INFO - This is sample joycontrol plugin!
+    [20:12:44] plugins/samples/SamplePlugin.py run::10 INFO - Plugin Options: ['option1', 'option2']
+    [20:12:44] plugins/samples/SamplePlugin.py run::12 INFO - Push the A Button
+    [20:12:45] plugins/samples/SamplePlugin.py run::16 INFO - Tilt the left stick down
+    [20:12:45] JoycontrolPlugin.loader start::55 INFO - Stopping communication...
     ```
 
 ## Plugins
