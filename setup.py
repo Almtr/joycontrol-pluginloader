@@ -5,7 +5,7 @@ README = open('README.md', 'r').read()
 
 setup(
     name='joycontrol-pluginloader',
-    version='0.1',
+    version='0.2',
     long_description=README,
     long_description_content_type='text/markdown',
     url='https://github.com/almtr/joycontrol-pluginloader',
