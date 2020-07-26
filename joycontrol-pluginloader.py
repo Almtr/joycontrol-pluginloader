@@ -37,7 +37,7 @@ async def _main(args):
         try:
             # waits until controller is fully connected
             await controller_state.connect()
-            joycontrol_plugin = load_plugin(args.plugin, controller_state, args.options)
+            joycontrol_plugin = load_plugin(args.plugin, controller_state, args.plugin_options)
             await joycontrol_plugin.run()
         except Exception as e:
             logger.error(e)
@@ -52,7 +52,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('plugin', type=str, help='joycontrol plugin path')
-    parser.add_argument('options', nargs='*', help='joycontrol plugin options')
+    parser.add_argument('-p', '--plugin-options', nargs='*', help='joycontrol plugin options')
     parser.add_argument('-d', '--device_id')
     parser.add_argument('-r', '--reconnect_bt_addr', type=str, default=None,
                         help='The Switch console Bluetooth address, for reconnecting as an already paired controller')

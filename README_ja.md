@@ -46,16 +46,18 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 - オプション
 
     ```
-    usage: joycontrol-pluginloader.py [-h] [-d DEVICE_ID] [-r RECONNECT_BT_ADDR]
-                                      [-v]
-                                      plugin [options [options ...]]
+    usage: joycontrol-pluginloader.py [-h]
+                                      [-p [PLUGIN_OPTIONS [PLUGIN_OPTIONS ...]]]
+                                      [-d DEVICE_ID] [-r RECONNECT_BT_ADDR] [-v]
+                                      plugin
 
     positional arguments:
       plugin                joycontrol plugin path
-      options               joycontrol plugin options
 
     optional arguments:
       -h, --help            show this help message and exit
+      -p [PLUGIN_OPTIONS [PLUGIN_OPTIONS ...]], --plugin-options [PLUGIN_OPTIONS [PLUGIN_OPTIONS ...]]
+                            joycontrol plugin options
       -d DEVICE_ID, --device_id DEVICE_ID
       -r RECONNECT_BT_ADDR, --reconnect_bt_addr RECONNECT_BT_ADDR
                             The Switch console Bluetooth address, for reconnecting
@@ -150,7 +152,7 @@ Aボタンを繰り返し押す。
 - joycontrol-pluginloader で SimpleMacro.py を実行する
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SimpleMacro.py a b x y up down left right
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SimpleMacro.py --plugin-options a b x y up down left right
     ```
 
 ## 参考
