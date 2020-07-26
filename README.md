@@ -19,7 +19,7 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 - Install joycontrol-pluginloader
 
     ```sh
-    $ git clone https://github.com/Almtr/joycontrol-pluginloader
+    $ git clone https://github.com/Almtr/joycontrol-pluginloader.git
     $ sudo pip3 install joycontrol-pluginloader/
     ```
 
@@ -32,13 +32,13 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 1. Run the script
 
     ```sh
-    $ sudo joycontrol-pluginloader.py plugins/tests/PairingController.py
+    $ sudo joycontrol-pluginloader plugins/tests/PairingController.py
     ```
 
     Run results:
 
     ```sh
-    $ sudo joycontrol-pluginloader.py plugins/tests/PairingController.py
+    $ sudo joycontrol-pluginloader plugins/tests/PairingController.py
     [17:03:13] joycontrol.server create_hid_server::58 WARNING - [Errno 98] Address already in use
     [17:03:13] joycontrol.server create_hid_server::60 WARNING - Fallback: Restarting bluetooth due to incompatibilities with the bluez "input" plugin. Disable the plugin to avoid issues. See https://github.com/mart1nro/joycontrol/issues/8.
     [17:03:13] joycontrol.server create_hid_server::65 INFO - Restarting bluetooth service...
@@ -71,16 +71,15 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 - Basic Usage
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> <Joycontrol Plugin path>
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> <Joycontrol Plugin path>
     ```
 
 - Options
 
     ```
-    usage: joycontrol-pluginloader.py [-h]
-                                      [-p [PLUGIN_OPTIONS [PLUGIN_OPTIONS ...]]]
-                                      [-d DEVICE_ID] [-r RECONNECT_BT_ADDR] [-v]
-                                      plugin
+    usage: joycontrol-pluginloader [-h] [-p [PLUGIN_OPTIONS [PLUGIN_OPTIONS ...]]]
+                                   [-d DEVICE_ID] [-r RECONNECT_BT_ADDR] [-v]
+                                   plugin
 
     positional arguments:
       plugin                joycontrol plugin path
@@ -124,7 +123,7 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 - Load and run ``SamplePlugin.py``
 
     ```sh
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SamplePlugin.py arg1 arg2
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/samples/SamplePlugin.py arg1 arg2
 
     <snip>
 
@@ -149,7 +148,7 @@ Check if the controller buttons are working properly.
 1. Run TestControllerButtons.py with joycontrol-pluginloader
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/tests/TestControllerButtons.py 
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/tests/TestControllerButtons.py 
     ```
 
 ### TestControllerSticks
@@ -163,7 +162,7 @@ Check if the controller sticks are working properly.
 1. Run TestControllerSticks.py with joycontrol-pluginloader
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/tests/TestControllerSticks.py 
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/tests/TestControllerSticks.py 
     ```
 
 ### RepeatA
@@ -173,7 +172,7 @@ Pushing the "A Button" repeatedly.
 - Run RepeatA.py with joycontrol-pluginloader
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/utils/RepeatA.py 
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/utils/RepeatA.py 
     ```
 
 ### SimpleMacro
@@ -183,7 +182,7 @@ Press the specified buttons in sequence.
 - Run SimpleMacro.py with joycontrol-pluginloader
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/utils/SimpleMacro.py --plugin-options a b x y up down left right
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/utils/SimpleMacro.py --plugin-options a b x y up down left right
     ```
 
 ## References

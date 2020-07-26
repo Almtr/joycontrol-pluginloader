@@ -19,7 +19,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 - joycontrol-pluginloader のインストール
 
     ```sh
-    $ git clone https://github.com/Almtr/joycontrol-pluginloader
+    $ git clone https://github.com/Almtr/joycontrol-pluginloader.git
     $ sudo pip3 install joycontrol-pluginloader/
     ```
 
@@ -32,13 +32,13 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 1. スクリプトを実行する
 
     ```sh
-    $ sudo joycontrol-pluginloader.py plugins/tests/PairingController.py
+    $ sudo joycontrol-pluginloader plugins/tests/PairingController.py
     ```
 
     実行結果:  
 
     ```sh
-    $ sudo joycontrol-pluginloader.py plugins/tests/PairingController.py
+    $ sudo joycontrol-pluginloader plugins/tests/PairingController.py
     [17:03:13] joycontrol.server create_hid_server::58 WARNING - [Errno 98] Address already in use
     [17:03:13] joycontrol.server create_hid_server::60 WARNING - Fallback: Restarting bluetooth due to incompatibilities with the bluez "input" plugin. Disable the plugin to avoid issues. See https://github.com/mart1nro/joycontrol/issues/8.
     [17:03:13] joycontrol.server create_hid_server::65 INFO - Restarting bluetooth service...
@@ -70,20 +70,19 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 - 基本的な使い方
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> <Joycontrol Plugin path>
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> <Joycontrol Plugin path>
     ```
 
 - オプション
 
     ```
-    usage: joycontrol-pluginloader.py [-h]
-                                      [-p [PLUGIN_OPTIONS [PLUGIN_OPTIONS ...]]]
-                                      [-d DEVICE_ID] [-r RECONNECT_BT_ADDR] [-v]
-                                      plugin
-
+    usage: joycontrol-pluginloader [-h] [-p [PLUGIN_OPTIONS [PLUGIN_OPTIONS ...]]]
+                                   [-d DEVICE_ID] [-r RECONNECT_BT_ADDR] [-v]
+                                   plugin
+    
     positional arguments:
       plugin                joycontrol plugin path
-
+    
     optional arguments:
       -h, --help            show this help message and exit
       -p [PLUGIN_OPTIONS [PLUGIN_OPTIONS ...]], --plugin-options [PLUGIN_OPTIONS [PLUGIN_OPTIONS ...]]
@@ -123,7 +122,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 - ``SamplePlugin.py`` をロードし、実行する 
 
     ```sh
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SamplePlugin.py arg1 arg2
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/samples/SamplePlugin.py arg1 arg2
 
     <snip>
 
@@ -148,7 +147,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 1. joycontrol-pluginloader で TestControllerButtons.py を実行する
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/tests/TestControllerButtons.py 
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/tests/TestControllerButtons.py 
     ```
 
 ### TestControllerSticks
@@ -162,7 +161,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 1. joycontrol-pluginloader で TestControllerSticks.py を実行する
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/tests/TestControllerSticks.py 
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/tests/TestControllerSticks.py 
     ```
 
 ### RepeatA
@@ -172,7 +171,7 @@ Aボタンを繰り返し押す。
 - joycontrol-pluginloader で RepeatA.py を実行する
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/utils/RepeatA.py 
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/utils/RepeatA.py 
     ```
 
 ### SimpleMacro
@@ -182,7 +181,7 @@ Aボタンを繰り返し押す。
 - joycontrol-pluginloader で SimpleMacro.py を実行する
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/utils/SimpleMacro.py --plugin-options a b x y up down left right
+    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/utils/SimpleMacro.py --plugin-options a b x y up down left right
     ```
 
 ## 参考
