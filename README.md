@@ -32,7 +32,7 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 1. Run the script
 
     ```sh
-    $ sudo python3 joycontrol/run_controller_cli.py PRO_CONTROLLER
+    $ sudo joycontrol-pluginloader.py plugins/tests/PairingController.py
     ```
 
 ## Usage
@@ -105,7 +105,7 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
     [13:30:01] __main__ _main::45 INFO - Stopping communication...
     ```
 
-## Sample Plugins
+## Plugins
 
 ### TestControllerButtons
 
@@ -118,7 +118,7 @@ Check if the controller buttons are working properly.
 1. Run TestControllerButtons.py with joycontrol-pluginloader
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerButtons.py 
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/tests/TestControllerButtons.py 
     ```
 
 ### TestControllerSticks
@@ -132,7 +132,7 @@ Check if the controller sticks are working properly.
 1. Run TestControllerSticks.py with joycontrol-pluginloader
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/TestControllerSticks.py 
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/tests/TestControllerSticks.py 
     ```
 
 ### RepeatA
@@ -142,7 +142,7 @@ Pushing the "A Button" repeatedly.
 - Run RepeatA.py with joycontrol-pluginloader
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/RepeatA.py 
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/utils/RepeatA.py 
     ```
 
 ### SimpleMacro
@@ -152,7 +152,7 @@ Press the specified buttons in sequence.
 - Run SimpleMacro.py with joycontrol-pluginloader
 
     ```
-    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/samples/SimpleMacro.py --plugin-options a b x y up down left right
+    $ sudo joycontrol-pluginloader.py -r <Switch Bluetooth Mac address> plugins/utils/SimpleMacro.py --plugin-options a b x y up down left right
     ```
 
 ## References
