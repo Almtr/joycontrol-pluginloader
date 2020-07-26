@@ -52,6 +52,7 @@ class PluginLoader:
             except Exception as e:
                 logger.error(e)
             finally:
+                logger.info('Stopping communication...')
                 await transport.close()
                 self.transport = None
                 self.joycontrol_cmd = None
