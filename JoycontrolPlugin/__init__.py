@@ -1,3 +1,3 @@
 from JoycontrolPlugin.commands import JoycontrolCommands
 from JoycontrolPlugin.plugin import JoycontrolPlugin, JoycontrolPluginError
-from JoycontrolPlugin.loader import load_plugin
+from JoycontrolPlugin.loader import PluginLoader
