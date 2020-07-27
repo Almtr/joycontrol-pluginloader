@@ -19,7 +19,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 - joycontrol-pluginloader のインストール
 
     ```sh
-    $ git clone https://github.com/Almtr/joycontrol-pluginloader.git
+    $ git clone --recursive https://github.com/Almtr/joycontrol-pluginloader.git
     $ sudo pip3 install joycontrol-pluginloader/
     ```
 
@@ -122,7 +122,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 - ``SamplePlugin.py`` をロードし、実行する 
 
     ```sh
-    $ sudo joycontrol-pluginloader -r EC:C4:0D:F0:D1:2E plugins/samples/SamplePlugin.py --plugin-options option1 option2
+    $ sudo joycontrol-pluginloader -r 01:23:45:67:89:AB plugins/samples/SamplePlugin.py --plugin-options option1 option2
 
     <snip>
 
@@ -136,53 +136,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 
 ## プラグイン
 
-### TestControllerButotns
-
-コントローラのボタンが正常に動作しているかを確認する。
-
-1. 「ボタンの動作チェック」メニューを開く
-
-    HOME > 設定 > コントローラーとセンサー > 入力デバイスの動作チェック > ボタンの動作チェック
-
-1. joycontrol-pluginloader で TestControllerButtons.py を実行する
-
-    ```
-    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/tests/TestControllerButtons.py 
-    ```
-
-### TestControllerSticks
-
-コントローラのスティックが正常に動作しているかを確認する。
-
-1. 「スティックの補正」メニューを開く
-
-    HOME > 設定 > コントローラーとセンサー > スティックの補正
-
-1. joycontrol-pluginloader で TestControllerSticks.py を実行する
-
-    ```
-    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/tests/TestControllerSticks.py 
-    ```
-
-### RepeatA
-
-Aボタンを繰り返し押す。
-
-- joycontrol-pluginloader で RepeatA.py を実行する
-
-    ```
-    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/utils/RepeatA.py 
-    ```
-
-### SimpleMacro
-
-指定されたボタンを順番に押す。
-
-- joycontrol-pluginloader で SimpleMacro.py を実行する
-
-    ```
-    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> plugins/utils/SimpleMacro.py --plugin-options a b x y up down left right
-    ```
+- [Almtr/joycontrol-plugins](https://github.com/Almtr/joycontrol-plugins)
 
 ## 参考
 
