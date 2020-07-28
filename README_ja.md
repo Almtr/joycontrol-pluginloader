@@ -63,14 +63,15 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
     ```
 
     > 備考:  
-    > 「01:23:45:67:89:AB」 は、Nintendo Switch Bluetooth Mac address です。この Mac address は、後で使用します。
+    > 「01:23:45:67:89:AB」 は、Nintendo Switch Bluetooth Mac address です。
+    > この Mac address は環境によって異なります。プラグイン実行時に使用するので、覚えておいてください。
 
 ## 使い方
 
 - 基本的な使い方
 
     ```
-    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> <Joycontrol Plugin path>
+    $ sudo joycontrol-pluginloader -r 01:23:45:67:89:AB <Joycontrol Plugin path>
     ```
 
 - オプション
@@ -93,6 +94,10 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
                             as an already paired controller
       -v, --verbose
     ```
+
+## プラグイン
+
+- [Almtr/joycontrol-plugins](https://github.com/Almtr/joycontrol-plugins)
 
 ## プラグインの作り方
 
@@ -133,10 +138,6 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
     [20:12:45] plugins/samples/SamplePlugin.py run::16 INFO - Tilt the left stick down
     [20:12:45] JoycontrolPlugin.loader start::55 INFO - Stopping communication...
     ```
-
-## プラグイン
-
-- [Almtr/joycontrol-plugins](https://github.com/Almtr/joycontrol-plugins)
 
 ## 参考
 

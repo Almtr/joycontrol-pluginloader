@@ -64,6 +64,7 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 
     > note:  
     > '01:23:45:67:89:AB' is your Nintendo Switch Bluetooth Mac address.
+    > This Mac address varies depending on the environment.
     > You will use this Mac address later.
 
 ## Usage
@@ -71,7 +72,7 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 - Basic Usage
 
     ```
-    $ sudo joycontrol-pluginloader -r <Switch Bluetooth Mac address> <Joycontrol Plugin path>
+    $ sudo joycontrol-pluginloader -r 01:23:45:67:89:AB <Joycontrol Plugin path>
     ```
 
 - Options
@@ -94,6 +95,10 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
                             as an already paired controller
       -v, --verbose
     ```
+
+## Plugins
+
+- [Almtr/joycontrol-plugins](https://github.com/Almtr/joycontrol-plugins)
 
 ## How to create a plugin
 
@@ -134,10 +139,6 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
     [20:12:45] plugins/samples/SamplePlugin.py run::16 INFO - Tilt the left stick down
     [20:12:45] JoycontrolPlugin.loader start::55 INFO - Stopping communication...
     ```
-
-## Plugins
-
-- [Almtr/joycontrol-plugins](https://github.com/Almtr/joycontrol-plugins)
 
 ## References
 
