@@ -62,7 +62,7 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
     [17:04:05] plugins/tests/PairingController.py run::11 INFO - Pairing completed.
     ```
 
-    > 注意:  
+    > 備考:  
     > 「01:23:45:67:89:AB」 は、Nintendo Switch Bluetooth Mac address です。この Mac address は、後で使用します。
 
 ## 使い方
