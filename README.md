@@ -100,6 +100,10 @@ This is a plugin loader for joycontrol that can emulate Nintendo Switch controll
 
 - [Almtr/joycontrol-plugins](https://github.com/Almtr/joycontrol-plugins)
 
+  Demo:  
+  [![](https://img.youtube.com/vi/JlspXe20-Dc/0.jpg)](https://www.youtube.com/watch?v=JlspXe20-Dc)  
+  https://www.youtube.com/watch?v=JlspXe20-Dc
+
 ## How to create a plugin
 
 - Create a file (e.g. ``SamplePlugin.py``)

@@ -99,6 +99,10 @@ Bluetooth 経由で Nintendo Switch コントローラのエミュレートが�
 
 - [Almtr/joycontrol-plugins](https://github.com/Almtr/joycontrol-plugins)
 
+  デモ:  
+  [![](https://img.youtube.com/vi/JlspXe20-Dc/0.jpg)](https://www.youtube.com/watch?v=JlspXe20-Dc)  
+  https://www.youtube.com/watch?v=JlspXe20-Dc
+
 ## プラグインの作り方
 
 - ファイルを作成する (例: ``SamplePlugin.py``)
