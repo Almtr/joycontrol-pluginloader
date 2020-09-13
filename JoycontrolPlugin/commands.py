@@ -1,9 +1,8 @@
 import math
 import asyncio
-import time
 import logging
 
-from joycontrol.controller_state import ControllerState
+from joycontrol.controller_state import button_push, button_press, button_release
 from joycontrol.command_line_interface import ControllerCLI
 
 logger = logging.getLogger(__name__)
@@ -57,28 +56,12 @@ class JoycontrolCommands:
         await self.stick('right', direction, angle, power)
 
     async def button_press(self, *buttons):
-        if not buttons:
-            raise ValueError('No Buttons were given.')
-        
         logger.debug('Press {}'.format(', '.join(buttons)))
-        button_state = self.controller_state.button_state
-        for button in buttons:
-            button_state.set_button(button)
-
-        # send report
-        await self.controller_state.send()
+        await button_press(self.controller_state, *buttons)
     
     async def button_release(self, *buttons):
-        if not buttons:
-            raise ValueError('No Buttons were given.')
-        
         logger.debug('Release {}'.format(', '.join(buttons)))
-        button_state = self.controller_state.button_state
-        for button in buttons:
-            button_state.set_button(button, pushed=False)
-
-        # send report
-        await self.controller_state.send()
+        await button_release(self.controller_state, *buttons)
 
     async def button_push(self, *buttons, press_time_sec=0.1):
         await self.button_press(*buttons)
