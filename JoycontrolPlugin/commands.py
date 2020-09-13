@@ -13,7 +13,11 @@ class JoycontrolCommands:
     def __init__(self, controller_state):
         self.cli = ControllerCLI(controller_state)
         self.controller_state = controller_state
-        self.max_stick_power = MAX_STICK_POWER
+        self.__max_stick_power = MAX_STICK_POWER
+    
+    @property
+    def max_stick_power(self):
+        return self.__max_stick_power
 
     def __calc_stick_position(self, angle, power):
         angle = (angle + 180) %  360 * -1
